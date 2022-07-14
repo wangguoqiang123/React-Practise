@@ -8,8 +8,9 @@ export default class Header extends Component {
     if(keyCode!== 13) return
     if(target.value === '') {
       alert('输入框不能为空')
+      return
     }
-    const todoObj = {id: nanoid(),name:target.vaue,done: false}
+    const todoObj = {id: nanoid(),name:target.value,done: false}
     this.props.addTodo(todoObj)
     target.value = ''
   }
